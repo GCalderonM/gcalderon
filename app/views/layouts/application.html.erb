@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Portofolio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+<html class="h-max antialiased dark">
+    <head>
+        <title>Portofolio</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+        <%= javascript_importmap_tags %>
+    </head>
 
-  <body class="flex h-full flex-col bg-zinc-50 dark:bg-black">
-    <main class="fixed inset-0 flex justify-center sm:px-8">
-      <div class="flex w-full max-w-7xl lg:px-8">
-        <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
-          <%= render "shared/navbar" %>
-          <%= yield %>
-        </div>
-      </div>
-    </main>
-  </body>
+    <body class="flex h-full flex-col bg-zinc-50 dark:bg-black">
+        <main class="flex h-full justify-center sm:px-8">
+            <div class="relative">
+                <div class="flex h-full w-full max-w-7xl lg:px-8">
+                    <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
+                        <%= render "shared/navbar" %>
+                        <%= yield %>
+                        <%= render "shared/footer" %>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>

@@ -3,13 +3,13 @@
         <%= image_tag "me", class: "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9" %>
     <% end %>
 
-    <div class="hidden md:flex rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg">
+    <div class="hidden md:flex rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <%= link_to "Blog", "#", class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
         <%= link_to "Projects", "#", class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
         <%= link_to "Uses", "#", class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
     </div>
 
-    <div class="hidden md:flex rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg">
+    <div class="hidden md:flex rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
         <%= button_tag class: "block px-3 py-2 transition hover:text-teal-500 dark: dark:hover:text-teal-400", data: { navbar_target: "mode" } do %>
             <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600">
                 <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"></path><path d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061" fill="none"></path>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="flex md:hidden gap-6">
-        <div class="flex justify-end items-center md:hidden rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg">
+        <div class="flex justify-end items-center md:hidden rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
             <%= button_tag class: "flex px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400", data: { navbar_target: "openMenu" } do %>
                 <span>Menu</span>
                 <svg class="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -38,17 +38,17 @@
             data-transition-leave-start="transform opacity-100 scale-100"
             data-transition-leave-end="transform opacity-0 scale-95"
             id="navbar-menu"
-            class="hidden absolute z-10 mt-12 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            class="hidden absolute z-10 mt-12 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-zinc-900/5 dark:ring-white/10"
+            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
             <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                <%= link_to "Blog", "#", class: "text-gray-700 hover:bg-gray-100 hover:dark:text-zinc-800 dark:text-zinc-200 block px-4 py-2 text-sm" %>
+                <%= link_to "Projects", "#", class: "text-gray-700 hover:bg-gray-100 hover:dark:text-zinc-800 dark:text-zinc-200 block px-4 py-2 text-sm" %>
+                <%= link_to "Uses", "#", class: "text-gray-700 hover:bg-gray-100 hover:dark:text-zinc-800 dark:text-zinc-200 block px-4 py-2 text-sm" %>
             </div>
         </div>
 
-        <div class="flex rounded-full bg-white/90 px-1 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg">
-            <%= button_tag class: "block px-3 py-2 transition hover:text-teal-500 dark: dark:hover:text-teal-400", data: { navbar_target: "mode" } do %>
+        <div class="flex rounded-full bg-white/90 px-1 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
+            <%= button_tag class: "block px-3 py-2 transition hover:text-teal-500 dark: dark:hover:text-teal-400", data: { navbar_target: "modeMobile" } do %>
                 <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600">
                     <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"></path><path d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061" fill="none"></path>
                 </svg>

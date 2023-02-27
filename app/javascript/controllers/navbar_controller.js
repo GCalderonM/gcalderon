@@ -3,11 +3,12 @@ import { toggle } from 'el-transition'
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ['openMenu', 'mode']
+  static targets = ['openMenu', 'mode', 'modeMobile']
 
   connect() {
     this.openMenuTarget.addEventListener('click', this.toggleMenu)
     this.modeTarget.addEventListener('click', this.toggleMode)
+    this.modeMobileTarget.addEventListener('click', this.toggleMode)
   }
 
   toggleMenu() {
