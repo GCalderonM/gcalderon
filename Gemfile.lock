@@ -101,6 +101,7 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
+    language_server-protocol (3.17.0.3)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -128,6 +129,7 @@ GEM
     nokogiri (1.14.2-x64-mingw-ucrt)
       racc (~> 1.4)
     pg (1.4.5)
+    prettier_print (1.2.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     pwned (2.4.1)
@@ -181,6 +183,10 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    ruby-lsp (0.4.1)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 6, < 7)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     sassc (2.4.0)
@@ -191,6 +197,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sorbet-runtime (0.5.10687)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -200,6 +207,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    syntax_tree (6.0.1)
+      prettier_print (>= 1.2.0)
     tailwindcss-rails (2.0.23-x64-mingw-ucrt)
       railties (>= 6.0.0)
     thor (1.2.1)
@@ -213,6 +222,10 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.7)
       tzinfo (>= 1.0.0)
+    view_component (2.82.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -241,12 +254,14 @@ DEPENDENCIES
   pwned
   rails (~> 7.0.4, >= 7.0.4.2)
   rspec-rails (~> 6.0.0)
+  ruby-lsp (~> 0.4.1)
   sassc-rails
   sprockets-rails
   stimulus-rails
   tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
+  view_component
   web-console
 
 RUBY VERSION

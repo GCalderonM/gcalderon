@@ -71,11 +71,13 @@ group :development do
   # gem "spring"
 end
 
+gem "view_component"
 
 gem "tailwindcss-rails", "~> 2.0"
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt", "~> 3.1.7"
+
 # Use Pwned to check if a password has been found in any of the huge data breaches [https://github.com/philnash/pwned]
 gem "pwned"
 
 gem "importmap-rails", "~> 1.1"
+
+gem "ruby-lsp", "~> 0.4.1", :group => :development, :require => false

@@ -1,0 +1,27 @@
+<div id="<%= dom_id work %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Company name:</strong>
+    <%= work.company_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Job:</strong>
+    <%= work.job %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Start year:</strong>
+    <%= work.start_year %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Finish year:</strong>
+    <%= work.finish_year %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this work", work, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this work', edit_work_path(work), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
