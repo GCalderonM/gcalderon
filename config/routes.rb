@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
+  get 'download_cv', to: 'home#download_cv'
 end

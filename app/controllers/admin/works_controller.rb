@@ -25,7 +25,10 @@ class Admin::WorksController < Admin::BaseController
 
     respond_to do |format|
       if @work.save
-        format.html { redirect_to work_url(@work), notice: "Work was successfully created." }
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.append("works", partial: "admin/works/work", locals: { work: @work, notice: "Work successfully created!" })
+        end
+        format.html { redirect_to admin_work_url(@work), notice: "Work was successfully created." }
         format.json { render :show, status: :created, location: @work }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +41,10 @@ class Admin::WorksController < Admin::BaseController
   def update
     respond_to do |format|
       if @work.update(work_params)
-        format.html { redirect_to work_url(@work), notice: "Work was successfully updated." }
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.replace(@work, partial: "admin/works/work", locals: { work: @work, notice: "Work successfully updated!" })
+        end
+        format.html { redirect_to admin_work_url(@work), notice: "Work was successfully updated." }
         format.json { render :show, status: :ok, location: @work }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,6 +58,9 @@ class Admin::WorksController < Admin::BaseController
     @work.destroy
 
     respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.remove(@work, partial: "admin/works/work")
+      end
       format.html { redirect_to works_url, notice: "Work was successfully destroyed." }
       format.json { head :no_content }
     end
@@ -65,6 +74,6 @@ class Admin::WorksController < Admin::BaseController
 
     # Only allow a list of trusted parameters through.
     def work_params
-      params.require(:work).permit(:company_name, :job, :start_year, :finish_year)
+      params.require(:work).permit(:company_name, :job, :start_year, :finish_year, :logo)
     end
 end
