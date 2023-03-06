@@ -75,6 +75,8 @@ gem "view_component"
 
 gem "tailwindcss-rails", "~> 2.0"
 
+gem "friendly_id", "~> 5.1.0"
+
 # Use Pwned to check if a password has been found in any of the huge data breaches [https://github.com/philnash/pwned]
 gem "pwned"
 

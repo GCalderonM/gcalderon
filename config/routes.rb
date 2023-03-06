@@ -12,8 +12,10 @@ Rails.application.routes.draw do
       resource :password_reset,     only: [:new, :edit, :create, :update]
     end
     resources :works
+    resources :posts, param: :slug
   end
 
   root 'home#index'
   get 'download_cv', to: 'home#download_cv'
+  get '/post/:slug', to: 'home#show_post', as: 'post', param: :slug
 end

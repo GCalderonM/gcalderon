@@ -59,7 +59,7 @@ class Admin::WorksController < Admin::BaseController
 
     respond_to do |format|
       format.turbo_stream do
-        render turbo_stream: turbo_stream.remove(@work, partial: "admin/works/work")
+        render turbo_stream: turbo_stream.remove(@work)
       end
       format.html { redirect_to works_url, notice: "Work was successfully destroyed." }
       format.json { head :no_content }
