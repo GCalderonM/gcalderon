@@ -13,4 +13,8 @@ class HomeController < ApplicationController
 
     render "show_post", locals: { post: @post }
   end
+
+  def projects
+    @projects = Project.all
+  end
 end

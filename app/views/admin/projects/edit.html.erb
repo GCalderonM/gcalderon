@@ -1,0 +1,3 @@
+<%= render(ModalComponent.new(title: "Edit #{@project.name} project")) do %>
+    <%= render "form", project: @project %>
+<% end %>

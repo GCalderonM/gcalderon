@@ -13,9 +13,11 @@ Rails.application.routes.draw do
     end
     resources :works
     resources :posts, param: :slug
+    resources :projects
   end
 
   root 'home#index'
   get 'download_cv', to: 'home#download_cv'
-  get '/post/:slug', to: 'home#show_post', as: 'post', param: :slug
+  get 'post/:slug', to: 'home#show_post', as: 'post', param: :slug
+  get 'projects', to: 'home#projects'
 end
