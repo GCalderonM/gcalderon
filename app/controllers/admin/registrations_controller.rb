@@ -1,4 +1,4 @@
-class Admin::RegistrationsController < AdminController
+class Admin::RegistrationsController < Admin::BaseController
   skip_before_action :authenticate, only: %i[ new create ]
 
   def new
