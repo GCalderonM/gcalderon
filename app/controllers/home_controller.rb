@@ -1,7 +1,17 @@
 class HomeController < ApplicationController
   def index
-    @works = Work.all.order('id DESC')
+    @projects = Project.all
+  end
+
+  def blog
     @posts = Post.all.with_rich_text_content.order('id DESC')
+  end
+
+  def uses
+  end
+
+  def works
+    @works = Work.all.order('id DESC')
   end
 
   def download_cv
@@ -12,9 +22,5 @@ class HomeController < ApplicationController
     @post = Post.friendly.find_by_slug(params[:slug])
 
     render "show_post", locals: { post: @post }
-  end
-
-  def projects
-    @projects = Project.all
   end
 end

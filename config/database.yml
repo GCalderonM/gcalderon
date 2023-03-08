@@ -76,6 +76,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["PORTOFOLIO_DB_URL"] %>
   database: portofolio_production
   username: portofolio
-  password: <%= ENV["PORTOFOLIO_DATABASE_PASSWORD"] %>
+  password: <%= ENV["PORTOFOLIO_DB_PASSWORD"] %>

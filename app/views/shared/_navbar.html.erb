@@ -1,12 +1,13 @@
 <nav class="flex items-center justify-center md:justify-between pt-6 relative px-16" data-controller="navbar">
-    <%= link_to root_path, class: "hidden md:flex" do %>
+    <%= link_to root_path, class: "flex pr-6" do %>
         <%= image_tag "me", class: "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9" %>
     <% end %>
 
     <div class="hidden md:flex rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <%= link_to "Blog", "#", class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
-        <%= link_to "Projects", projects_path, class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
-        <%= link_to "Uses", "#", class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
+        <%= link_to "Home", root_path, class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
+        <%= link_to "Blog", blog_path, class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
+        <%= link_to "Uses", uses_path, class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
+        <%= link_to "Works", works_path, class: "block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" %>
     </div>
 
     <div class="hidden md:flex rounded-full bg-white/90 px-3 text-zinc-800 text-sm font-medium ring-1 ring-zinc-900/5 backdrop-blur shadow-lg transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">

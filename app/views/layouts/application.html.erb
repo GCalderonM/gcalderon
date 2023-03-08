@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="min-h-full antialiased dark">
+<html class="min-h-screen antialiased dark">
     <head>
         <title>GCalderonM</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,17 +12,11 @@
         <%= javascript_importmap_tags %>
     </head>
 
-    <body class="flex h-full flex-col bg-zinc-50 dark:bg-black">
-        <main class="flex h-full justify-center sm:px-8">
-            <div class="relative">
-                <div class="flex h-full w-full max-w-7xl lg:px-8">
-                    <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
-                        <%= render "shared/navbar" %>
-                        <%= yield %>
-                        <%= render "shared/footer" %>
-                    </div>
-                </div>
-            </div>
+    <body class="flex flex-col max-w-6xl mx-auto h-screen bg-zinc-50 dark:bg-black">
+        <%= render "shared/navbar" %>
+        <main class="flex-1">
+            <%= yield %>
         </main>
+        <%= render "shared/footer" %>
     </body>
 </html>

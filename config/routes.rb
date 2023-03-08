@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'download_cv', to: 'home#download_cv'
   get 'post/:slug', to: 'home#show_post', as: 'post', param: :slug
-  get 'projects', to: 'home#projects'
+  get 'blog', to: 'home#blog'
+  get 'uses', to: 'home#uses'
+  get 'works', to: 'home#works'
 end
